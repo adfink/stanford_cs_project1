@@ -27,10 +27,6 @@ for c in countries:
 
 processed_country_data = {}
 
-
-data = country_data['Drewtopia']
-print data
-
 processed_country_data = {}
 
 for c in country_data:
@@ -66,4 +62,4 @@ for c in country_data:
         c_data['data'] = data
         processed_country_data[c] = c_data
 
-print processed_country_data['Drewtopia']
+print processed_country_data['France']
