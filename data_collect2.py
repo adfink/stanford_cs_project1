@@ -63,3 +63,34 @@ for c in country_data:
         processed_country_data[c] = c_data
 
 print processed_country_data['France']
+
+
+
+#now must find the top five, bottom five (by average) and then the 5 with most difference, and the US and graph these
+averages = []
+differences = []
+for c in processed_country_data:
+    av = processed_country_data[c]['average']
+    diff = processed_country_data[c]['difference']
+    averages.append(av)
+    differences.append(diff)
+averages.sort()
+differences.sort()
+lower_limit = averages[4]
+upper_limit = averages[len(averages)-5]
+most_diff = differences[len(averages)-5]
+
+high_av_counties = []
+low_av_counties = []
+high_variable_countries = []
+for c in processed_country_data:
+    if processed_country_data[c]['average'] >= upper_limit:
+        high_av_counties.append(c)
+    if processed_country_data[c]['average'] <= lower_limit:
+        low_av_counties.append(c)
+    if processed_country_data[c]['difference'] >= most_diff:
+        high_variable_countries.append(c)
+
+print high_av_counties
+print low_av_counties
+print high_variable_countries
