@@ -1,6 +1,12 @@
+# import code; code.interact(local=locals())
+from __future__ import division
+import csv
+import matplotlib.pyplot as plt
 
 
-
+plt.plot([1, 2, 3])
+plt.legend(['A simple line'])
+plt.show
 
 # print ag_im[2]
 # print ag_im[2]['Country Name']

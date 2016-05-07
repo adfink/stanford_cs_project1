@@ -91,6 +91,77 @@ for c in processed_country_data:
     if processed_country_data[c]['difference'] >= most_diff:
         high_variable_countries.append(c)
 
+
+
 print high_av_counties
 print low_av_counties
 print high_variable_countries
+
+#fill in zero values with average
+for c in processed_country_data:
+    counter = 0
+    for d in processed_country_data[c]['data']:
+        if d == 0:
+            processed_country_data[c]['data'][counter] = processed_country_data[c]['average']
+        counter += 1
+
+color = ['blue','green','yellow','red','orange']
+#graphing
+counter = 0
+for c in high_av_counties:
+    x = processed_country_data[c]['data']
+    y = years
+    plt.plot(y,x,color=color[counter])
+    counter += 1
+x = processed_country_data['United States']['data']
+y = years
+plt.plot(y,x,color='black')
+plt.legend(high_av_counties)
+plt.show()
+
+color = ['blue','green','yellow','red','orange']
+#graphing
+counter = 0
+for c in low_av_counties:
+    x = processed_country_data[c]['data']
+    y = years
+    plt.plot(y,x,color=color[counter])
+    counter += 1
+x = processed_country_data['United States']['data']
+y = years
+plt.plot(y,x,color='black')
+
+plt.legend(low_av_counties)
+plt.show()
+
+color = ['blue','green','yellow','red','orange']
+#graphing
+counter = 0
+for c in high_variable_countries:
+    x = processed_country_data[c]['data']
+    y = years
+    plt.plot(y,x,color=color[counter])
+    counter += 1
+x = processed_country_data['United States']['data']
+y = years
+plt.plot(y,x,color='black')
+
+plt.legend(high_variable_countries)
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#find average for each year
