@@ -220,30 +220,30 @@ class CountryProfile:
         print "         average: {}".format(self.ag_machine_minion.processed_country_data[self.country]['average'])
         print "         maximum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['maximum'])
         print "         minimum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['minimum'])
-        print "         minimum: {}".format(self.food_index_minion.processed_country_data[self.country]['minimum'])
+        
     def ag_land(self):
         print "     Agricultural Machinery Data:"
-        print "         average: {}".format(self.ag_machine_minion.processed_country_data[self.country]['average'])
-        print "         maximum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['maximum'])
-        print "         minimum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['minimum'])
-        print "         minimum: {}".format(self.food_index_minion.processed_country_data[self.country]['minimum'])
+        print "         average: {}".format(self.ag_land_minion.processed_country_data[self.country]['average'])
+        print "         maximum: {}".format(self.ag_land_minion.processed_country_data[self.country]['maximum'])
+        print "         minimum: {}".format(self.ag_land_minion.processed_country_data[self.country]['minimum'])
+
     def arable_land(self):
         print "     Agricultural Machinery Data:"
-        print "         average: {}".format(self.ag_machine_minion.processed_country_data[self.country]['average'])
-        print "         maximum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['maximum'])
-        print "         minimum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['minimum'])
-        print "         minimum: {}".format(self.food_index_minion.processed_country_data[self.country]['minimum'])
+        print "         average: {}".format(self.arable_land_minion.processed_country_data[self.country]['average'])
+        print "         maximum: {}".format(self.arable_land_minion.processed_country_data[self.country]['maximum'])
+        print "         minimum: {}".format(self.arable_land_minion.processed_country_data[self.country]['minimum'])
+
     def fert(self):
         print "     Agricultural Machinery Data:"
-        print "         average: {}".format(self.ag_machine_minion.processed_country_data[self.country]['average'])
-        print "         maximum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['maximum'])
-        print "         minimum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['minimum'])
-        print "         minimum: {}".format(self.food_index_minion.processed_country_data[self.country]['minimum'])
+        print "         average: {}".format(self.fertilizer_minion.processed_country_data[self.country]['average'])
+        print "         maximum: {}".format(self.fertilizer_minion.processed_country_data[self.country]['maximum'])
+        print "         minimum: {}".format(self.fertilizer_minion.processed_country_data[self.country]['minimum'])
+
     def percent_emp(self):
         print "     Agricultural Machinery Data:"
-        print "         average: {}".format(self.ag_machine_minion.processed_country_data[self.country]['average'])
-        print "         maximum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['maximum'])
-        print "         minimum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['minimum'])
+        print "         average: {}".format(self.percent_emp_minion.processed_country_data[self.country]['average'])
+        print "         maximum: {}".format(self.percent_emp_minion.processed_country_data[self.country]['maximum'])
+        print "         minimum: {}".format(self.percent_emp_minion.processed_country_data[self.country]['minimum'])
 
 
 
