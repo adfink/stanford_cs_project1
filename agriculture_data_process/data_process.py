@@ -158,12 +158,23 @@ class DataParser:
             plt.ylabel(self.y_axis, fontsize=18)
             plt.xlabel('years', fontsize=16)
             counter += 1
+
+    def graph_one_country_data(self, country_name):
+        self.process_data()
+        x = self.processed_country_data[country_name]['data']
+        y = self.years
+        title = "{}".format(self.title_name + " for: " + country_name)
+        plt.plot(y,x)
+        plt.suptitle(title, fontsize=20)
+        plt.ylabel(self.y_axis, fontsize=18)
+        plt.xlabel('years', fontsize=16)
+
             # import code; code.interact(local=locals())
         # use this code if you want to include where the united states falls on the chart
         # x = self.processed_country_data['United States']['data']
         # y = self.years
         # plt.plot(y,x,color='black')
-        plt.legend(self.graph_able_data[data_id])
+        # plt.legend(self.graph_able_data[data_id])
         plt.show()
 
 
@@ -220,7 +231,7 @@ class CountryProfile:
         print "         average: {}".format(self.ag_machine_minion.processed_country_data[self.country]['average'])
         print "         maximum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['maximum'])
         print "         minimum: {}".format(self.ag_machine_minion.processed_country_data[self.country]['minimum'])
-        
+
     def ag_land(self):
         print "     Agricultural Machinery Data:"
         print "         average: {}".format(self.ag_land_minion.processed_country_data[self.country]['average'])
@@ -267,11 +278,14 @@ class DataAggregator:
 
     def most_potential(self):
         #most potential will have lowest fertilizer, lowest tractor, highest land, highest ag land
+        #more work must be done here. Not enough time to finsih this portion
         print self
 
+
+food_index_minion.graph_one_country_data("United States")
 
 aggregator = DataAggregator(food_index_minion,ag_machine_minion,ag_land_minion,arable_land_minion,fertilizer_minion,percent_emp_minion)
 aggregator.most_potential()
 
-detailer = CountryProfile("France",food_index_minion,ag_machine_minion,ag_land_minion,arable_land_minion,fertilizer_minion,percent_emp_minion)
+detailer = CountryProfile("United States",food_index_minion,ag_machine_minion,ag_land_minion,arable_land_minion,fertilizer_minion,percent_emp_minion)
 detailer.display_country_details()
